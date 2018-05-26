@@ -5,7 +5,15 @@
     "start": "meteor run"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0-beta.42",
-    "meteor-node-stubs": "^0.3.2"
+    "@babel/runtime": "^7.0.0-beta.48",
+    "bcrypt": "^2.0.1",
+    "emoji-js": "^3.4.0",
+    "emoji-picker-react": "^2.0.4",
+    "meteor-node-stubs": "^0.3.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-router-dom": "^4.2.2",
+    "simpl-schema": "^1.5.0",
+    "twemoji": "^2.5.1"
   }
 }
