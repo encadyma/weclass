@@ -11,6 +11,7 @@ import PersonItem from './PersonItem'
 
 class ContactsPage extends Component {
   mapContacts() {
+    if (!this.props.students.length) return <div>No contacts to see here...</div>
     return this.props.students.map((student) => <PersonItem user={student} key={student._id}/>)
   }
 
