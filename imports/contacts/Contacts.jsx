@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom'
 import { Students } from '../api/students'
 
 import ContactsHeader from './Header'
+import NoAccountNotice from '../components/NoAccountNotice'
 import PersonItem from './PersonItem'
 
 class ContactsPage extends Component {
@@ -24,6 +25,7 @@ class ContactsPage extends Component {
     if (this.props.currentUserIsLoading) return null
     return <div className="Contacts">
       <ContactsHeader/>
+      <NoAccountNotice/>
       {this.mapContacts()}
     </div>
   }

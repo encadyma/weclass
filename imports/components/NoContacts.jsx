@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-export default class NoAccountNotice extends Component {
+export default class NoContacts extends Component {
   render() {
     return <div className="NoAccountNotice">
       <b>There's still a few steps left.</b>&nbsp;

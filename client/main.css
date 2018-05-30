@@ -172,3 +172,23 @@ html, body {
 }
 
 .PersonItem-Options-Field-Value {}
+
+.NoAccountNotice {
+  background-color: #e74c3c;
+  cursor: pointer;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin: 5px 0;
+  transition: 150ms ease;
+}
+
+.NoAccountNotice:hover {
+  background-color: #d44232;
+}
+
+.NoAccountNotice p {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
