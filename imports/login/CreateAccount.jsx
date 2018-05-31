@@ -34,16 +34,12 @@ class CreateAccountPage extends Component {
         email: this.state.email,
         password: this.state.password
       }, (e) => {
-        console.log(e)
-        this.setState({ error: e.reason })
+        this.setState({ error: e.reason || null })
         Meteor.loginWithPassword(this.state.email, this.state.password, (err) => {
           if (!err) this.props.history.push('/contacts')
-          this.setState({ error: err.reason })
+          this.setState({ error: err.reason || null })
         })
       })
-
-      
-
     } catch (e) {
       this.setState({
         error: e.reason

@@ -1,8 +1,16 @@
 import React, { Component } from 'react'
 
-import { Link } from 'react-router-dom'
+import { Meteor } from 'meteor/meteor'
 
-export default class HomePage extends Component {
+import { Link, withRouter } from 'react-router-dom'
+import { withTracker } from 'meteor/react-meteor-data'
+
+class HomePage extends Component {
+  componentDidUpdate() {
+    if (this.props.currentUser)
+      this.props.history.push('/contacts')
+  }
+
   render() {
     return <div className="HomePage">
       <h1 className="HomePage-header">
@@ -17,3 +25,10 @@ export default class HomePage extends Component {
     </div>
   }
 }
+
+export default withTracker(() => {
+  return {
+    currentUser: Meteor.user(),
+    loggingIn: Meteor.loggingIn()
+  }
+})(withRouter(HomePage))

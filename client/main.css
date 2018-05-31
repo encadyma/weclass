@@ -81,6 +81,11 @@ html, body {
   font-size: 16px;
   font-family: 'Fira Sans', sans-serif;
   padding: 8px 10px;
+  outline: none;
+}
+
+.Forms-input:focus {
+  border-bottom-color: #5B5B5B;
 }
 
 .Forms-input-large {
@@ -191,4 +196,35 @@ html, body {
   display: inline;
   margin: 0;
   padding: 0;
+}
+
+.Contacts-Header-submenu {
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Contacts-Header-submenu-item {
+  font-size: 16px;
+  margin: 0 20px;
+  color: #707070;
+  cursor: pointer;
+}
+
+.Contacts-Header-submenu-item:hover {
+  color: #505050;
+}
+
+.BackButton {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  color: #909090;
+  transition: 150ms ease;
+}
+
+.BackButton:hover {
+  color: #505050;
 }
